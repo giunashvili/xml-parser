@@ -1,0 +1,15 @@
+{
+    "name": "giunashvili/xml-parser",
+    "description": "This is simple package to parse array into xml simply and easy.",
+    "type": "composer-plugin",
+    "authors": [
+        {
+            "name": "giunashvili",
+            "email": "giorgi.official@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Giunashvili\\XMLParser\\": "src/" }
+    },
+    "require": {}
+}
