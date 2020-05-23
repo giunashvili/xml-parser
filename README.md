@@ -33,7 +33,9 @@ $arr = [
     ]
 ];
 
+
 $xmlWithoutDefinedWrapper = Parse :: arrayAsXml( $arr );
+
 echo $xmlWithoutDefinedWrapper;
 /**
     <data>
@@ -49,7 +51,9 @@ echo $xmlWithoutDefinedWrapper;
     </data>
 */
 
+
 $xmlWithDefinedWrapper    = Parse :: arrayAsXml( $arr, 'classifications' );
+
 echo $xmlWithoutDefinedWrapper;
 /**
     <classifications>
@@ -85,8 +89,10 @@ $xml =
         '</plangs>'.
     '</data>';
 
+
 $arr = Parse :: xmlAsArray( $xml );
-echo $arr;
+
+print_r( $arr );
 /**
     [
         'classification' => [
@@ -97,8 +103,8 @@ echo $arr;
                     'Kangaroo'  => 'Jack'
                 ],
                 'plants' => [
-                    'item-0' => 'bamboo',
-                    'item-1' => 'apple'
+                    'item-0'    => 'bamboo',
+                    'item-1'    => 'apple'
                 ]
             ]
         ]
