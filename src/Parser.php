@@ -3,7 +3,9 @@
 namespace Giunashvili\XMLParser;
 
 use Giunashvili\XMLParser\Interfaces\BaseParser;
+
 use Giunashvili\XMLParser\Parsers\ArrayIntoXml;
+use Giunashvili\XMLParser\Parsers\XmlIntoArray;
 
 class Parser implements BaseParser
 {
@@ -15,7 +17,8 @@ class Parser implements BaseParser
    */
   public function xmlToArray( $xml ): array
   {
-    $arr = [];
+    $xmlToArrayParser = new XmlIntoArray();
+    $arr              = $xmlToArrayParser -> parse( $xml );
 
     return $arr;
   }

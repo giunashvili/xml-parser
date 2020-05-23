@@ -7,5 +7,5 @@ interface Parser
   /**
    * Parse 
    */
-  function parse( $data, $wrapper = 'data' );
+  function parse( $data );
 }
