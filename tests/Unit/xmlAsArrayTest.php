@@ -1,6 +1,6 @@
 <?php
 
-use Giunashvili\XMLParser\Parser;
+use Giunashvili\XMLParser\Parse;
 
 it( 'parses without heading', function() {
 
@@ -17,9 +17,7 @@ it( 'parses without heading', function() {
     ],
   ];
 
-  $parser     = new Parser;
-  $parsedXML  = $parser -> xmlToArray( $xml );
-
+  $parsedXML  = Parse :: xmlAsArray( $xml );
 
   assertEquals( $expectedParsedXML, $parsedXML );
 
@@ -40,8 +38,7 @@ it( 'parses with heading', function() {
     ],
   ];
 
-  $parser     = new Parser;
-  $parsedXML  = $parser -> xmlToArray( $xml );
+  $parsedXML  = Parse :: xmlAsArray( $xml );
 
   assertEquals( $expectedParsedXML, $parsedXML );
 });
@@ -78,8 +75,7 @@ it( 'parses multi-dim xml', function() {
     ],
   ];
 
-  $parser = new Parser;
-  $parsedXML = $parser -> xmlToArray( $xml );
+  $parsedXML = Parse :: xmlAsArray( $xml );
 
   assertEquals( $expectedParsedXML, $parsedXML );
 });

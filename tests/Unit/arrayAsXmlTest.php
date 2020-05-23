@@ -1,6 +1,6 @@
 <?php
 
-use Giunashvili\XMLParser\Parser;
+use Giunashvili\XMLParser\Parse;
 
 it('sets header to data if not passed', function(){
 
@@ -13,8 +13,7 @@ it('sets header to data if not passed', function(){
       '<animal>bear</animal>'.
     '</data>';
 
-  $parser       = new Parser;
-  $parsedXML    = $parser -> arrayToXml( $arr );
+  $parsedXML    = Parse :: arrayAsXml( $arr );
 
   assertEquals( $parsedXML, $shouldBeXML );
 });
@@ -29,8 +28,7 @@ it( 'sets custom header if passed', function(){
       '<animal>bear</animal>'.
     '</classifications>';
 
-  $parser       = new Parser;
-  $parsedXML    = $parser -> arrayToXml( $arr, 'classifications' );
+  $parsedXML    = Parse :: arrayAsXml( $arr, 'classifications' );
 
   assertEquals( $parsedXML, $shouldBeXML );
 
@@ -52,8 +50,7 @@ it( 'parses one-dim array', function(){
       '<robot>Dolores</robot>'.
     '</data>';
 
-  $parser = new Parser;
-  $parsedXML = $parser -> arrayToXml( $arr );
+  $parsedXML = Parse :: arrayAsXml( $arr );
 
   assertEquals( $parsedXML, $shouldBeXML );
 
@@ -82,8 +79,7 @@ it( 'parses multi-dim array', function() {
       '</animals>'.
     '</data>';
   
-  $parser = new Parser;
-  $parsedXML = $parser -> arrayToXml( $arr );
+  $parsedXML = Parse :: arrayAsXml( $arr );
 
   assertEquals( $shouldBeXML, $parsedXML );
 });
@@ -113,8 +109,7 @@ it( 'parses numeric indexed array', function() {
       '</humans>'.
     '</data>';
 
-  $parser = new Parser;
-  $parsedXML = $parser -> arrayToXml( $arr );
+  $parsedXML = Parse :: arrayAsXml( $arr );
 
   assertEquals( $shouldBeXML, $parsedXML );
 });
