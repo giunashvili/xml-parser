@@ -4,11 +4,19 @@
     "authors": [
         {
             "name": "giunashvili",
-            "email": "giorgi.official@yahoo.com"
+            "email": "giorgi.official@yahoo.com",
+            "role": "Developer",
+            "homepage": "https://github.com/giunashvili"
         }
     ],
     "autoload": {
         "psr-4": { "Giunashvili\\XMLParser\\": "src/" }
     },
+    "keywords": [ "xml", "parsing", "parser", "xml-parsing", "xml-parser", "parse", "parse-xml" ],
+    "homepage": "https://github.com/giunashvili/xml-parser",
+    "readme": "https://github.com/giunashvili/xml-parser/blob/master/README.md",
+    "time": "2020-05-22",
+    "license": "MIT",
+    "minimum-stability": "stable",
     "require": {}
 }
