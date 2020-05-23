@@ -17,6 +17,10 @@
     "readme": "https://github.com/giunashvili/xml-parser/blob/master/README.md",
     "time": "2020-05-22",
     "license": "MIT",
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "pestphp/pest": "^0.1.3"
+    }
 }
